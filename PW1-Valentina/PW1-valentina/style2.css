@@ -1,0 +1,157 @@
+.logo {
+    width: 330px;
+}
+
+.navbar {
+    background-color: #F4EEE6;
+    height: 150px;
+}
+
+.navbar .nav-link {
+    font-size: 20px;
+     font-family: Georgia, serif;
+      font-weight: bold;
+       color: #7D5A50;
+       margin-bottom: 12px;
+}
+
+.linha {
+    background-color: rgb(129, 70, 6);
+    height: 20px;
+    margin-top: -16px;
+}
+
+body {
+    background-color: #d2b79387;
+}
+
+.cardapio {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.cardapio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.cardapio::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(1deg, #F4EEE6 0%, #F4EEE6 25%, rgba(244, 238, 230, 0.7) 45%, rgba(244, 238, 230, 0) 70%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.cardapio-conteudo {
+    position: absolute;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 450px;
+}
+
+.cardapio-conteudo h1 {
+    font-family: Georgia, serif;
+    font-size: 64px;
+    font-weight: bold;
+    color: #6c2a18a4;
+    margin-bottom: 12px;
+}
+
+.cardapio-conteudo p {
+    font-size: 18px;
+    color: #333333;
+    margin-top: -15px;
+    margin-left: 5px;
+    line-height: 1.4;
+    margin-bottom: 60px;
+}
+
+.container-cardapio {
+    padding: 10px 25px 50px;
+}
+
+.categoria {
+    margin-top: 40px;
+}
+
+.categoria-titulo {
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: bold;
+    color: #7D5A50;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid rgb(129, 70, 6);
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    width: 220px;
+    margin: 0;
+    background-color: #7D5A50;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 322 / 452;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.card-title {
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    min-height: 72px;
+}
+
+.card-preco {
+    color: #F4EEE6;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 0 12px;
+}
+
+.card .btn {
+    background-color: #86321b;
+    border-color: #86321b;
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.card .btn:hover {
+    background-color: #a63f23;
+    border-color: #a63f23;
+}

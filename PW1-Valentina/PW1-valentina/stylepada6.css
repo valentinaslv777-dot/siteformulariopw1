@@ -1,0 +1,80 @@
+/* Página: croissant-frances (stylepada6.css)
+   Página de produto (usa o navbar, a .linha e o body do style2.css) */
+
+.produto {
+    display: flex;
+    align-items: flex-start;
+    gap: 70px;
+    padding: 60px 70px;
+}
+
+.produto-foto {
+    flex: 0 0 490px;
+}
+
+.img {
+    display: block;
+    width: 490px;
+    max-width: 100%;
+}
+
+.produto-info {
+    flex: 1;
+}
+
+.produto-titulo {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    margin: 0;
+}
+
+.preco {
+    font-family: Georgia, serif;
+    font-size: 35px;
+    margin-top: 15px;
+}
+
+.desconto {
+    text-decoration: line-through;
+    opacity: 0.5;
+    font-family: Georgia, serif;
+}
+
+.produto-descricao {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 1.9;
+    margin-top: 20px;
+    max-width: 900px;
+}
+
+.produto-descricao p {
+    margin-bottom: 10px;
+}
+
+.comprar button,
+.ifood button {
+    display: block;
+    width: 600px;
+    max-width: 100%;
+    padding: 8px 0;
+    background-color: #7D5A50;
+    color: white;
+    border: 1px solid #5e4038;
+    transition: 0.3s;
+}
+
+.comprar button {
+    margin-top: 30px;
+}
+
+.ifood button {
+    margin-top: 4px;
+}
+
+.comprar button:hover,
+.ifood button:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.05);
+}

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Padasaito's</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img class="logo" src="logo-padasaitos.png"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="cardapio.html">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#padaria">Padaria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cadastro">Cadastro</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="linha">
+    <hr>
+</div>
+
+<div class="croissant">
+    <img src="croissantcafe.jpg" alt="Croissant">
+
+    <div class="croissant-conteudo">
+        <h1>Croissant</h1>
+        <p>Crocante por fora, macio por dentro.<br>Perfeito para qualquer momento do dia.</p>
+        <a href="cardapio.html" class="btn-mais-produtos">Mais produtos</a>
+    </div>
+</div>
+
+<section class="padaria" id="padaria">
+
+    <div class="padaria-texto">
+        <h2>Sobre a Padasaito's</h2>
+        <p>A Padasaito's é uma das padarias mais tradicionais de Itanhaém. São 11 unidades prontas para oferecer uma pausa saborosa no seu dia, com pães, croissants, pães de queijo e lanches feitos na hora.</p>
+        <p>Estamos abertos todos os dias, das 6h30 às 22h. Venha tomar um café da manhã com a gente ou levar um pãozinho quentinho para casa.</p>
+        <p>Estamos localizados aqui:</p>
+        <a href="https://share.google/FZHrQccn0b3sT4e96" target="_blank" rel="noopener" class="btn-mapa">Ver no Google Maps</a>
+    </div>
+
+    <div class="padaria-mapa">
+        <iframe src="https://www.google.com/maps?q=Padasaito%27s+Padaria+Itanh%C3%A1em&output=embed" title="Localização da Padasaito's Padaria" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+
+</section>
+
+<!-- Formulário de cadastro -->
+<div class="container mt-5 mb-5" id="cadastro">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow-sm">
+                <div class="card-body">
+
+                    <h3 class="mb-2 text-center">Cadastro para contato</h3>
+                    <p class="text-center">Preencha os dados abaixo e entraremos em contato com você.</p>
+
+                    <form id="formCadastro">
+
+                        <div class="mb-3">
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpf" maxlength="14" placeholder="000.000.000-00">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="celular" class="form-label">Celular</label>
+                            <input type="text" class="form-control" id="celular" maxlength="15" placeholder="(00) 00000-0000">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagem" rows="4"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Modal de sucesso -->
+<div class="modal fade" id="modalSucesso" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cadastro realizado</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p id="msgSucesso"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+
+        <div class="footer-col footer-marca">
+            <img class="footer-logo" src="logo-padasaitos.png" alt="Padasaito's Padaria">
+            <p>Uma das padarias mais tradicionais de Itanhaém, com pães, croissants e lanches feitos na hora para você.</p>
+        </div>
+
+        <div class="footer-col">
+            <h3>Navegação</h3>
+            <ul>
+                <li><a href="cardapio.html">Cardápio</a></li>
+                <li><a href="#padaria">Padaria</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Funcionamento</h3>
+            <ul>
+                <li>Todos os dias</li>
+                <li>Das 6h30 às 22h</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>Onde estamos</h3>
+            <ul>
+                <li>Itanhaém</li>
+                <li>11 unidades prontas para te atender</li>
+                <li><a href="#" class="footer-ifood">Peça no iFood</a></li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+        <p>&copy; 2026 Padasaito's Padaria. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+
+<script>
+$(document).ready(function () {
+
+   
+    $("#cpf").on("input", function () {
+        let cpf = $(this).val().replace(/\D/g, "");
+        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d)/, "$1.$2");
+        cpf = cpf.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+        $(this).val(cpf);
+    });
+
+    
+    $("#celular").on("input", function () {
+        let cel = $(this).val().replace(/\D/g, "");
+        cel = cel.replace(/^(\d{2})(\d)/, "($1) $2");
+        cel = cel.replace(/(\d{5})(\d)/, "$1-$2");
+        $(this).val(cel);
+    });
+
+    $("#formCadastro").on("submit", function (e) {
+        e.preventDefault();
+
+        let nome = $("#nome").val().trim();
+        let cpf = $("#cpf").val().trim();
+        let email = $("#email").val().trim();
+        let celular = $("#celular").val().trim();
+        let mensagem = $("#mensagem").val().trim();
+
+        let tudoOk = true;
+
+        
+        if (nome.length < 3) {
+            $("#nome").addClass("is-invalid").removeClass("is-valid");
+            tudoOk = false;
+        } else {
+            $("#nome").addClass("is-valid").removeClass("is-invalid");
+        }
+
+      
+        if (cpf.length !== 14) {
+            $("#cpf").addClass("is-invalid").removeClass("is-valid");
+            tudoOk = false;
+        } else {
+            $("#cpf").addClass("is-valid").removeClass("is-invalid");
+        }
+
+        
+        if (email.indexOf("@") === -1 || email.indexOf(".") === -1) {
+            $("#email").addClass("is-invalid").removeClass("is-valid");
+            tudoOk = false;
+        } else {
+            $("#email").addClass("is-valid").removeClass("is-invalid");
+        }
+
+     
+        if (celular.length !== 15) {
+            $("#celular").addClass("is-invalid").removeClass("is-valid");
+            tudoOk = false;
+        } else {
+            $("#celular").addClass("is-valid").removeClass("is-invalid");
+        }
+
+      
+        if (mensagem.length < 10) {
+            $("#mensagem").addClass("is-invalid").removeClass("is-valid");
+            tudoOk = false;
+        } else {
+            $("#mensagem").addClass("is-valid").removeClass("is-invalid");
+        }
+
+    
+        if (tudoOk === false) {
+            return;
+        }
+
+      
+        $("#msgSucesso").text("Cadastro realizado com sucesso! Bem-vindo, " + nome + ".");
+        let modal = new bootstrap.Modal($("#modalSucesso")[0]);
+        modal.show();
+    });
+
+});
+</script>
+</body>
+</html>
